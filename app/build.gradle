@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace 'com.example.appletv' // <-- добавьте вот эту строку сюда!
+    namespace 'com.example.appletv'
     compileSdk 33
 
     defaultConfig {
@@ -30,4 +30,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.recyclerview:recyclerview:1.3.0'
+    
+    // Вот эта библиотека решит проблему с ошибкой темы:
+    implementation 'com.google.android.material:material:1.8.0'
 }
