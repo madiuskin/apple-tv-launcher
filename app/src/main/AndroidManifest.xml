@@ -18,9 +18,7 @@
 
     <uses-feature android:name="android.software.leanback" android:required="true" />
 
-    <application
-        android:roundIcon="@mipmap/ic_launcher"
-        android:icon="@mipmap/ic_launcher">
+    <application>
         <activity
             android:name=".HomeActivity"
             android:exported="true"
