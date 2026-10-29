@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Apple TV</string>
+    <string name="tv_input_service">Apple TV TV Input</string>
+    <string name="pill_inputs">Inputs</string>
+    <string name="pill_wifi">Wi-Fi</string>
+    <string name="pill_settings">Settings</string>
+    <string name="dock_app1">App 1</string>
+    <string name="dock_app2">App 2</string>
+    <string name="dock_app3">App 3</string>
+    <string name="dock_app4">App 4</string>
+</resources>

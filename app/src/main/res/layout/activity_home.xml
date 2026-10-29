@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true">
+
+    <!-- Top bar with clock, date, and pills -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_gravity="top">
+
+        <!-- Clock + Date top left -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:text="00:00"/>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white_70"
+                android:text="Thu, Jan 1"/>
+        </LinearLayout>
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <!-- Pill buttons top right -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/pill_inputs"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_input"
+                android:background="@drawable/pill_button_background"
+                android:contentDescription="@string/pill_inputs"/>
+
+            <ImageButton
+                android:id="@+id/pill_wifi"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_wifi"
+                android:background="@drawable/pill_button_background"
+                android:contentDescription="@string/pill_wifi"/>
+
+            <ImageButton
+                android:id="@+id/pill_settings"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_settings"
+                android:background="@drawable/pill_button_background"
+                android:contentDescription="@string/pill_settings"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Main content area -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/dock"
+        android:layout_below="@+id/top_bar">
+
+        <!-- Dock at the bottom -->
+        <LinearLayout
+            android:id="@+id/dock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/dock_background"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageButton
+                android:id="@+id/dock_app1"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@drawable/app_tile_background"
+                android:contentDescription="@string/dock_app1"/>
+
+            <ImageButton
+                android:id="@+id/dock_app2"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@drawable/app_tile_background"
+                android:contentDescription="@string/dock_app2"/>
+
+            <ImageButton
+                android:id="@+id/dock_app3"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@drawable/app_tile_background"
+                android:contentDescription="@string/dock_app3"/>
+
+            <ImageButton
+                android:id="@+id/dock_app4"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@drawable/app_tile_background"
+                android:contentDescription="@string/dock_app4"/>
+        </LinearLayout>
+
+        <!-- App grid that scrolls up -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/app_grid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/dock"
+            android:layout_below="@+id/top_bar"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"
+            android:orientation="vertical"
+            android:scrollbars="vertical"/>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
