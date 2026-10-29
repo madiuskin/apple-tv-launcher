@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace 'com.example.appletv' // <-- добавьте вот эту строку сюда!
     compileSdk 33
 
     defaultConfig {
