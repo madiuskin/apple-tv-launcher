@@ -58,7 +58,7 @@
                 android:id="@+id/pill_inputs"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:src="@drawable/ic_input"
+                android:src="@drawable/ic_youtube"
                 android:background="@drawable/pill_button_background"
                 android:contentDescription="@string/pill_inputs"/>
 
@@ -66,7 +66,7 @@
                 android:id="@+id/pill_wifi"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:src="@drawable/ic_wifi"
+                android:src="@drawable/ic_vlc"
                 android:background="@drawable/pill_button_background"
                 android:contentDescription="@string/pill_wifi"/>
 
@@ -74,7 +74,7 @@
                 android:id="@+id/pill_settings"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:src="@drawable/ic_settings"
+                android:src="@drawable/ic_video"
                 android:background="@drawable/pill_button_background"
                 android:contentDescription="@string/pill_settings"/>
         </LinearLayout>
