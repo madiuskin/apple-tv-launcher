@@ -2,21 +2,19 @@ package com.example.appletv
 
 import android.os.Bundle
 import android.view.KeyEvent
-import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.SnapHelper
 import com.example.appletv.adapter.AppAdapter
 import com.example.appletv.model.AppItem
 
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var appGrid: RecyclerView
-    private lateinit var dockApps: ImageButton[]
+    private lateinit var dockApps: Array<ImageButton>
     private lateinit var clockText: TextView
     private lateinit var dateText: TextView
 
@@ -28,8 +26,8 @@ class HomeActivity : AppCompatActivity() {
         clockText = findViewById(R.id.clock)
         dateText = findViewById(R.id.date)
 
-        // Dock
-        dockApps = intArrayOf(
+        // Dock - исправлено на Array<ImageButton>
+        dockApps = arrayOf(
             findViewById(R.id.dock_app1),
             findViewById(R.id.dock_app2),
             findViewById(R.id.dock_app3),
@@ -58,8 +56,8 @@ class HomeActivity : AppCompatActivity() {
         }
         appGrid.adapter = adapter
 
-        // Snap to center on focus
-        val snapHelper = SnapHelper()
+        // Snap to center on focus - заменено на LinearSnapHelper (так как SnapHelper абстрактный)
+        val snapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(appGrid)
     }
 
